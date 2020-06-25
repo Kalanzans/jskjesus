@@ -8,40 +8,24 @@
 </head>
 <body>
 
-  <div id="nissan">
+  <div id="linux">
+    linux 0
+    <div class="ubuntu">
+      Ubuntu 1
+      <div class="elementaryos">
+        Elementary OS 1a
+      </div>
+    </div>
 
-  </div>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo quos ex odit repudiandae ea odio iste doloremque, quas recusandae iure perferendis dolor hic aspernatur quis ipsam voluptate. Mollitia, est quam?</p>
-  <br><br>
-  <div class="coisa">
+    <div class="debian">
+      Debian 2
+    </div>
   </div>
   
-  <!-- <button onclick="document.getElementById('nissan').removeChild(sentra)">remove</button> -->
-  <button id="btn1" onclick="remove()">remove</button>
-
-
   <script>
-
-    let versa = document.createElement('p');
-    let sentra = document.createElement('p');
-    let image = document.createElement('img');
-    let image2 = document.createElement('img');
-
-    image.src = 'https://loremflickr.com/320/240';
-    image2.src = 'https://loremflickr.com/g/320/240/paris'
-    versa.innerHTML = 'versa';
-    sentra.innerHTML = 'sentra';
-
-    document.getElementById('nissan').appendChild(versa);
-    document.getElementById('nissan').appendChild(sentra);
-    document.getElementById('nissan').appendChild(image);
-    // document.getElementsByClassName('coisa')[0].appendChild(image2);
- 
-    function remove(){
-      document.getElementById('nissan').removeChild(sentra);
-      // document.getElementById('btn1').style.visibility = 'hidden'
-      document.getElementById('btn1').hidden = true;''
-    }
+    console.log( document.querySelector('.elementaryos').parentNode.parentNode.parentNode.parentNode )
+    console.log( document.querySelector('.elementaryos'))
+    console.log( document.querySelector('.debian').parentNode)
     
   </script>  
 </body>
