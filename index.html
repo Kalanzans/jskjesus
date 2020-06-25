@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keven Jesus jQuery</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="test">1</div>
+    <div class="test">2</div>
+    <div class="test">3</div>
+
+    <div id="pai">
+      <div class="filho">1</div>
+      <div class="mae">2</div>
+      <div class="filho">2</div>
+      <div class="mae">2</div>
+      <div class="filho">3</div>
+    </div>
+
+    <div id="paizao">
+      <div class="filho">alo</div>
+      <div class="filho">oi</div>
+      <div class="filho">ola</div>
+    </div>
+
+    <p>oi</p>
+  <p>olá</p>
+
+  <script>
+
+    let n = document.getElementById('pai').querySelectorAll('.filho').length;
+    console.log(n);
+
+    if( document.getElementById('pai').querySelectorAll('.filho').length > 2){
+      console.log('ok')
+    }else{
+      console.log('negativo')
+    }
+
+    console.log( document.querySelectorAll('.test') )
+    console.log( document.getElementById('pai').querySelectorAll('.filho') )
+
+  </script>  
+</body>
+</html>
