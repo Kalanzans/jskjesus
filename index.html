@@ -8,61 +8,29 @@
 </head>
 <body>
 
- 
-  <div class="js">react</div>
-  <div class="js">angular</div>
-  <div class="js">typescript</div>
-  <div class="js">es6</div>  
 
 
   <script>
-    // let tecjs = document.getElementsByClassName('js'), i=0;
-    let tecjs = document.querySelectorAll('.js') ;
-    let txt='';
-    let mtz = [1,2,3,4]
-    console.log(tecjs, mtz);
+    let pessoa = {
+      nome: 'Keven Jesus',
+      idade: 24,
+      profissao: 'professor',
+      cidade: 'SP'
+      };
 
+    function novaPessoa(newObjectPerson){
+      if(typeof newObjectPerson == 'object'){
+        pessoa = newObjectPerson;
+        return true;
+      }else{
+        return false;
+      }
+    }
 
-
-    //via WHILE
-    // while( i<4 ){
-    //   console.log( tecjs[i].innerHTML );
-    //   i++
-    // }
-
-    //via MAP (retorna clone do array)
-    // let nova = mtz.map( function(elem, index){
-    //   console.log(elem, index);
-    //   if(elem == 1){
-    //     elem = 'outra coisa'
-    //   }
-    //   return elem;
-    // });
-    // console.log(nova);
-
-    //via FOREACH
-    // mtz.forEach(function(i,x){    //foreach só opera array proto (elem, index)
-    //    console.log(i,x)
-    //    if(i == 1){
-    //      mtz[x] = 'virou outra coisa!' 
-    //    }
-    // });
-    // console.log(mtz)
-
-    //via FOR
-    // for(i; i<4; i++){
-    //   txt = tecjs[i].innerHTML;
-    //   tecjs[i].innerHTML = 'curso ' + txt + '.js'
-    // };
-
-    // let filho = 'francis';
-    // let pai = 'barrimbhal';
-
-    // switch ("hoje"){
-    //   case 'francis' : console.log('filho'); break;
-    //   case 'barrimbhal': console.log('pai'); break;
-    //   default: console.log('resultado fora de escopo!')
-    // }
+    function testParameters(){
+      console.log(arguments);
+      return true;
+    }
 
   </script>  
 </body>
