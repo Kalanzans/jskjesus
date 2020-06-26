@@ -8,44 +8,61 @@
 </head>
 <body>
 
+ 
+  <div class="js">react</div>
+  <div class="js">angular</div>
+  <div class="js">typescript</div>
+  <div class="js">es6</div>  
 
-  
-
-
-
-
-
-
-
-  
 
   <script>
+    // let tecjs = document.getElementsByClassName('js'), i=0;
+    let tecjs = document.querySelectorAll('.js') ;
+    let txt='';
+    let mtz = [1,2,3,4]
+    console.log(tecjs, mtz);
 
-    let array = [ 'francis', ['dados', ['Minas Gerais']] ]
-    console.log(array[1][1][0])
 
-    // let array = [ 'francis', ['dados', ['Minas Gerais']] ]
-    // console.log(array[1][1][0])
 
-    // let array = ['francis', 49, 'Belo Horizonte', {nome: 'Mundão'}];
-    // console.log(array[3].nome)
+    //via WHILE
+    // while( i<4 ){
+    //   console.log( tecjs[i].innerHTML );
+    //   i++
+    // }
 
-    // let carro = {
-    //   placa: 'ADD-4423',
-    //   modelo: 'Sedã',
-    //   marca: 'Hyndai',
-    //   opicionais: {
-    //     cambio: 'automatico',
-    //     combustivel: 'flex',
-    //     extra: {
-    //       leasing: 'Itau',
-    //       cidade: 'Paraguassu'
-    //     }
-    //   },
-    //   "outra coisa": "podicr3333"
+    //via MAP (retorna clone do array)
+    // let nova = mtz.map( function(elem, index){
+    //   console.log(elem, index);
+    //   if(elem == 1){
+    //     elem = 'outra coisa'
+    //   }
+    //   return elem;
+    // });
+    // console.log(nova);
+
+    //via FOREACH
+    // mtz.forEach(function(i,x){    //foreach só opera array proto (elem, index)
+    //    console.log(i,x)
+    //    if(i == 1){
+    //      mtz[x] = 'virou outra coisa!' 
+    //    }
+    // });
+    // console.log(mtz)
+
+    //via FOR
+    // for(i; i<4; i++){
+    //   txt = tecjs[i].innerHTML;
+    //   tecjs[i].innerHTML = 'curso ' + txt + '.js'
     // };
 
-    // console.log(carro["outra coisa"])
+    // let filho = 'francis';
+    // let pai = 'barrimbhal';
+
+    // switch ("hoje"){
+    //   case 'francis' : console.log('filho'); break;
+    //   case 'barrimbhal': console.log('pai'); break;
+    //   default: console.log('resultado fora de escopo!')
+    // }
 
   </script>  
 </body>
