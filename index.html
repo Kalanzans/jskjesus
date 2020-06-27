@@ -8,29 +8,30 @@
 </head>
 <body>
 
+  <!-- <h4>Meu botão</h4>
+  <button id="btn1">click</button> -->
 
 
+
+<h4 id="tit">Meu Botão</h4>
+<button id="bt">Click</button>
+
+
+
+
+  
   <script>
-    let pessoa = {
-      nome: 'Keven Jesus',
-      idade: 24,
-      profissao: 'professor',
-      cidade: 'SP'
-      };
 
-    function novaPessoa(newObjectPerson){
-      if(typeof newObjectPerson == 'object'){
-        pessoa = newObjectPerson;
-        return true;
-      }else{
-        return false;
-      }
-    }
+    let head = document.getElementById('tit');
+    let btn = document.getElementById('bt');
+    btn.addEventListener('click', function(){
+      console.log('click');
+      head.remove();
+    })
 
-    function testParameters(){
-      console.log(arguments);
-      return true;
-    }
+    // window.onload = function(){
+    //   console.log('ok!')
+    // }
 
   </script>  
 </body>
