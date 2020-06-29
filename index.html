@@ -8,20 +8,31 @@
 
 </head>
 <body>
+  
+<input type="text" id="search" autofocus>
+<div id="result">não há nada aqui</div>
 
-  <input type="text" id="nome">
-  <input type="text" id="sobrenome">
+<script>
+  //lock
+  let busca = document.getElementById('search');
+  let result = document.getElementById('result')
+  //listen
+  busca.addEventListener('keyup', function(){
 
-  <!-- ------------------------------------   -->
-  <script>
-    let nome = document.getElementById('nome');
-    let sobrenome = document.getElementById('sobrenome');
+    result.innerText = this.value ? this.value : 'vazio'; 
 
-    nome.addEventListener('blur', function(){
-      console.log('deu blur');
-      sobrenome.value = this.value
-    })
+    // if(this.value)
+    //   result.innerText = this.value
+    // else
+    //   result.innerText = 'vazio'    
 
-  </script>  
+  })
+    // let nome = document.getElementById('nome');
+    // let sobrenome = document.getElementById('sobrenome');
+
+    // nome.addEventListener('blur', function(){
+    //   console.log('deu blur');
+    //   sobrenome.value = this.value
+    // })
 </body>
 </html>
