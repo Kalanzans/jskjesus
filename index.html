@@ -8,31 +8,29 @@
 
 </head>
 <body>
+
+
+  <input type="text" id="text" autofocus>
+  <div id="result" style="display: none;">é o enter uhu!</div>
+
+
+  <script>
+    let text = document.getElementById('text');
+    let result = document.getElementById('result');
+    const keyEnter = 13;
+    text.addEventListener('keypress', function(e){  //event
+      // console.log('echo:', this.value);
+      // console.log(e.keyCode);
+      if(e.keyCode == keyEnter)
+        result.style.display = 'block'
+      else  
+        result.style.display = 'none'
+
+    })
+
+
+
+  </script>
   
-<input type="text" id="search" autofocus>
-<div id="result">não há nada aqui</div>
-
-<script>
-  //lock
-  let busca = document.getElementById('search');
-  let result = document.getElementById('result')
-  //listen
-  busca.addEventListener('keyup', function(){
-
-    result.innerText = this.value ? this.value : 'vazio'; 
-
-    // if(this.value)
-    //   result.innerText = this.value
-    // else
-    //   result.innerText = 'vazio'    
-
-  })
-    // let nome = document.getElementById('nome');
-    // let sobrenome = document.getElementById('sobrenome');
-
-    // nome.addEventListener('blur', function(){
-    //   console.log('deu blur');
-    //   sobrenome.value = this.value
-    // })
 </body>
 </html>
