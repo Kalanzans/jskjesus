@@ -6,45 +6,33 @@
   <title>Keven Jesus jQuery</title>
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/app.css">
-
 </head>
-<body>
 
-  <div class="box"></div>
-  <hr>
-  <button id="start">>NEXT</button>
-  <button id="prev" disabled>&ltPREV </button>
+<body>
+  
+  <button>Click</button>
+  <div class="msg">Olá Brasil!</div>
+
+
+
+
+
+
+
 
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script>
-    // document.getElementById('prev').disabled = true;
-    // http://api.jquery.com/category/events/
-    let box = $('.box');
-    let start = $('#start');
-    let prev = $('#prev');
-    // console.log(box, start)
+  // https://api.jquery.com/delay/ 
+  
+    let btn = $('button');
+    let msg = $('.msg');
 
-    //teste com vários tipos de eventos: blur, hover, click...
-    // start.click(function(){ console.log('click no button');   }) 
-    // start.hover(function(){ console.log('click no button');   }) 
+    btn.on('click', function(){
+      // msg.fadeOut(); 
+      msg.delay(1000).fadeOut(); //delay('fast') | delay('slow') 
+    })  
 
-    //on() no jQuery corresponde ao addEventListener() do JS
-    start.on('click', function(){   
-      // console.log('click');
-      box.animate({ left: '800'}, 1500);  //tempo duração é o 2º par de animate
-      $('#start').attr('disabled','disabled');
-      $('#prev').removeAttr('disabled');
-     
-      // $('#start').css('display','none')      
-      // $('#prev').css('display','block')      
-    });
-    prev.on('click', function(){
-      box.animate({ left: '0', }, 1500);  //tempo duração é o 2º par de animate
-      $('#start').removeAttr('disabled');
-      $('#prev').attr('disabled','disabled');
-      // $('#start').css('display','block')      
-      // $('#prev').css('display','none')      
-    });
+
   </script>  
 </body>
 </html>
