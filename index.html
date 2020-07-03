@@ -12,21 +12,39 @@
 
   <div class="box"></div>
   <hr>
-
+  <button id="start">>NEXT</button>
+  <button id="prev" disabled>&ltPREV </button>
 
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script>
+    // document.getElementById('prev').disabled = true;
+    // http://api.jquery.com/category/events/
     let box = $('.box');
-    // box.animate({ 
-    //   width: '200px', 
-    //   height: '200px',
-    //   left: '500px'   }, 5000);
-    
-    // box.show(); 
-    // box.hide();
-    // box.fadeIn();
-    // box.fadeOut();
-    // box.fadeIn(1000);
+    let start = $('#start');
+    let prev = $('#prev');
+    // console.log(box, start)
+
+    //teste com vários tipos de eventos: blur, hover, click...
+    // start.click(function(){ console.log('click no button');   }) 
+    // start.hover(function(){ console.log('click no button');   }) 
+
+    //on() no jQuery corresponde ao addEventListener() do JS
+    start.on('click', function(){   
+      // console.log('click');
+      box.animate({ left: '800'}, 1500);  //tempo duração é o 2º par de animate
+      $('#start').attr('disabled','disabled');
+      $('#prev').removeAttr('disabled');
+     
+      // $('#start').css('display','none')      
+      // $('#prev').css('display','block')      
+    });
+    prev.on('click', function(){
+      box.animate({ left: '0', }, 1500);  //tempo duração é o 2º par de animate
+      $('#start').removeAttr('disabled');
+      $('#prev').attr('disabled','disabled');
+      // $('#start').css('display','block')      
+      // $('#prev').css('display','none')      
+    });
   </script>  
 </body>
 </html>
