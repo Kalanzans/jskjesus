@@ -10,28 +10,24 @@
 
 <body>
   
-  <button>Click</button>
-  <div class="msg">Olá Brasil!</div>
-
-
-
-
-
-
-
+ <ul>
+   <li><a class="link active" href="#">Home</a></li>
+   <li><a class="link" href="#">Empresa</a></li>
+   <li><a class="link" href="#">Projetos</a></liclass=>
+   <li><a class="link" href="#">Contato</a></li=>
+ </ul> 
 
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script>
-  // https://api.jquery.com/delay/ 
-  
-    let btn = $('button');
-    let msg = $('.msg');
+    // AddClass -> https://api.jquery.com/addClass/ 
+    // RemoveClass -> https://api.jquery.com/removeClass/
 
-    btn.on('click', function(){
-      // msg.fadeOut(); 
-      msg.delay(1000).fadeOut(); //delay('fast') | delay('slow') 
-    })  
+    let link = $('.link');
 
+    link.on('click', function(){
+      link.removeClass('active');
+      $(this).addClass('active');
+    })
 
   </script>  
 </body>
