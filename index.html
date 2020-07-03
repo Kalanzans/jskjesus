@@ -9,22 +9,58 @@
 </head>
 <body>
 
-  <div class="container">
-    <div class="item"></div>
+	<ul class="menu">
+		<li><a href="#empresa">Empresa</a></li>
+		<li><a href="#projetos">Projetos</a></li>
+		<li><a href="#contato">Contato</a></li>
+	</ul>
+
+  <div class="item">
+    <h2 id="empresa">Empresa</h2>
   </div>
+  <div class="item">
+    <h2 id="projetos">Projetos</h2>
+  </div>
+  <div class="item">
+    <h2 id="contato">Contato</h2>
+  </div>
+
+  <button class="btn">Subir</button>
 
 
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script>
-  // Documentação position -> https://api.jquery.com/position/
-  // Documentação offset - > https://api.jquery.com/offset/
+  // Download do arquivo para aula -> https://www.sendspace.com/file/2567e0 
+  // Documentação oficial scroll -> https://api.jquery.com/scroll/
+  // Documentação oficial scrollTop -> https://api.jquery.com/scrollTop/
 
-    let container = $('.container');
-    let item = $('.item');
-    // let posItem = item.position(); //pos cerca elem pai
-    let posItem = item.offset();   //posicionamento global (browser)
+    let link = $('.menu li a');
+    let subir = $('.btn');
 
-    console.log(posItem.left, posItem.top);
+    $(window).scroll( function(){
+      // console.log('ok');
+      let atualPos = $(this).scrollTop();   //console.log(atualPos);
+      if(atualPos >= 1200){
+        subir.fadeIn()
+      }else{
+        subir.fadeOut()
+      }
+
+    })
+
+    link.on('click', function(){
+      // console.log('teste');
+      let seletor = $(this).attr('href');    // console.log(seletor);
+      let posicao = $(seletor).offset().top;  //vai pro item via #id
+      // console.log(posicao);
+      $('html, body').animate({scrollTop: posicao-60}, 1000)
+
+    });
+
+    subir.on('click', function(){
+      $('html, body').animate({scrollTop: 0}, 500)
+    })
+    
   </script>  
 </body>
 </html>
